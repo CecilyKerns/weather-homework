@@ -21,20 +21,57 @@ app.post('/', function (req, res) {
         if(err){
             res.render('index', {weather: null, error: 'Error, please try again'});
         } else {
-            let weather = JSON.parse(body); 
-            if(weather.main === undefined){
+            let weather = JSON.parse(body);
+            if (weather.main === undefined) {
                 res.render('index', {weather: null, error: 'Error, please try again'});
             } else {
-                let weatherText = `It's ${weather.main.temp} degrees Fahrenheit in ${weather.name}!`;
-                res.render('index', {weather: weatherText, error: null});
+                let temperature = weather.main.temp;
+                let weatherCity = weather.name;
+
+                let weatherData = [
+                    {weatherCity, temperature}
+                ];
+
+                function generateTableHead(table, data) {
+                    let thead = table.createTHead();
+                    let row = thead.insertRow();
+                    for (let key of data) {
+                        let th = document.createElement("th");
+                        let text = document.createTextNode(key);
+                        th.appendChild(text);
+                        row.appendChild(th);
+                    }
+                }
+
+                function generateTable(table, data) {
+                    for (let element of data) {
+                        let row = table.insertRow();
+                        for (key in element) {
+                            let cell = row.insertCell();
+                            let text = document.createTextNode(element[key]);
+                            cell.appendChild(text);
+                        }
+                    }
+                }
+
+                let table = document.querySelector("table");
+                let data = Object.keys(weatherData[0]);
+                generateTableHead(table, data);
+                generateTable(table, weatherData);
             }
         }
     });
-});
+
+
+    let weatherText = `It's ${temperature} degrees Fahrenheit in ${weatherCity}!`;
+                res.render('index', {weather: weatherText, error: null});
+
 
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')
 });
+});
+
 
 
 
