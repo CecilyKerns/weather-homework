@@ -1,10 +1,11 @@
 const request = require('request');
 const express = require('express');
 const bodyParser = require('body-parser');
+const argv = require('yargs').argv;
 const app = express();
 
 let apiKey = 'bedaf9a789a504a64aff26996089ef2b';
-let city = `portland`;
+let city = arg.c || `rocklin`;
 let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
 request(url, function (err, response, body) {
