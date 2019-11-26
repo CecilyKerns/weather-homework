@@ -18,9 +18,7 @@ app.post('/', function (req, res) {
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
     request(url, function (err, response, body) {
-        if(err){
-            res.render('index', {weather: null, error: 'Error, please try again'});
-        } else {
+        if (!err) {
             let weather = JSON.parse(body);
             if (weather.main === undefined) {
                 res.render('index', {weather: null, error: 'Error, please try again'});
@@ -46,9 +44,9 @@ app.post('/', function (req, res) {
                 function generateTable(table, data) {
                     for (let element of data) {
                         let row = table.insertRow();
-                        for (key in element) {
+                        for (let key in element) {
                             let cell = row.insertCell();
-                            let text = document.createTextNode(element[key]);
+                            let text = document.createTextNode(element);
                             cell.appendChild(text);
                         }
                     }
@@ -59,7 +57,7 @@ app.post('/', function (req, res) {
                 generateTableHead(table, data);
                 generateTable(table, weatherData);
             }
-        }
+        } else res.render('index', {weather: null, error: 'Error, please try again'});
     });
 
 
