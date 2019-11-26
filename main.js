@@ -5,7 +5,7 @@ const app = express();
 
 let apiKey = 'bedaf9a789a504a64aff26996089ef2b';
 let city = `portland`;
-let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`;
+let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
 request(url, function (err, response, body) {
     if(err){

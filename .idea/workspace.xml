@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9cfed812-f2f6-4a74-bf46-9a77a3a92f12" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/node_modules/request/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/cookies.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/getProxyFromURI.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/har.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/hawk.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/helpers.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/multipart.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/oauth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/querystring.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/redirect.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/lib/tunnel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/node_modules/request/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -89,7 +72,7 @@
       <workItem from="1574728439249" duration="944000" />
       <workItem from="1574729791047" duration="8000" />
       <workItem from="1574729801310" duration="963000" />
-      <workItem from="1574730923520" duration="807000" />
+      <workItem from="1574730923520" duration="1002000" />
     </task>
     <servers />
   </component>
