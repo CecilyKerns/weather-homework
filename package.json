@@ -1,8 +1,8 @@
 {
   "name": "projects",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Server Weather Application",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,6 +17,8 @@
     "body-parser": "^1.19.0",
     "ejs": "^2.7.4",
     "express": "^4.17.1",
+    "memory-cache": "^0.2.0",
+    "node-cache": "^5.0.2",
     "request": "^2.88.0",
     "server": "^1.0.20",
     "unirest": "^0.6.0"

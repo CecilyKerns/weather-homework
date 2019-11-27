@@ -1,9 +1,13 @@
+<!-- views/index.ejs -->
+
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
-    <title>Forekast</title>
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
 </head>
 <body>
@@ -14,7 +18,7 @@
             <input type="submit" class="ghost-button" value="Get Weather">
         </form>
         <% if(weather !== null){ %>
-            <p><%= weather %></p>
+            <%= weather %>
         <% } %>
 
         <% if(error !== null){ %>
@@ -25,19 +29,19 @@
     <table>
         <thead>
         <tr>
-            <th>weatherCity</th>
-            <th>temperature</th>
+            <th>name</th>
+            <th>height</th>
+            <th>place</th>
         </tr>
+        </thead>
         <tbody>
         <tr>
-            <td>weatherCity</td>
-            <td>temperature</td>
+            <td>Monte Falco</td>
+            <td>1658</td>
+            <td>Parco Foreste</td>
         </tr>
-        <tr>...</tr>
         </tbody>
-        </thead>
     </table>
-    <script src="main.js"></script>
 </div>
 </body>
 </html>
