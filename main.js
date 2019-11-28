@@ -24,6 +24,8 @@ app.post('/', function (req, res) {
             res.render('index', {weather: null, error: 'Error, please try again'});
         } else {
             let weather = JSON.parse(body);
+            myCache.set("weatherTemperatureKey", weather.main.temp, 1800);
+            myCache.set("weatherTemperatureKey", weather.name, 1800);
 
             if(weather.main === undefined){
                 res.render('index', {weather: null, error: 'Error, please try again'});
@@ -31,8 +33,6 @@ app.post('/', function (req, res) {
                 let weatherText = `It's ${weather.main.temp} degrees Fahrenheit in ${weather.name}!`;
                 res.render('index', {weather: weatherText, error: null});
 
-                myCache.set("weatherTemperatureKey", weather.main.temp, 1800);
-                myCache.set("weatherTemperatureKey", weather.name, 1800);
             }
         }
     });
