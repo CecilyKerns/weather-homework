@@ -25,7 +25,7 @@ app.post('/', function (req, res) {
         } else {
             let weather = JSON.parse(body);
             myCache.set("weatherTemperatureKey", weather.main.temp, 1800);
-            myCache.set("weatherTemperatureKey", weather.name, 1800);
+            myCache.set("weatherCityKey", weather.name, 1800);
 
             if(weather.main === undefined){
                 res.render('index', {weather: null, error: 'Error, please try again'});
